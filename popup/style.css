@@ -23,6 +23,12 @@ body{
 	padding: 10px;
 	cursor: pointer;
 }
+.bigButton{
+	width: calc(50% - 22px);
+}
 .button:hover{
 	background-color: gray;
+}
+.b{
+	font-weight: bold;
 }
