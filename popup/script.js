@@ -20,7 +20,7 @@ function changeSubtractionToAddingNegativeNumbers(x){
 		if (index!=-1){
 			flag=true
 			x[index+1]=x[index+1]*-1;
-			if (!isNaN(x[index-1])){
+			if (!isNaN(x[index-1]) || x[index-1]==")"){
 				x[index]="+";
 			}
 			else{
