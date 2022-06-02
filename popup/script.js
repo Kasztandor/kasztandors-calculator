@@ -88,6 +88,10 @@ function sendingBracketsToNoBracketsEquationCounterAndCountingIt(x){
 }
 function checkingAndCountingMainFunction(){
 	var string = document.getElementById("field").value;
+	string = string.replace(/[\-][\-\+\/\*]/g, '-')
+	string = string.replace(/[\+][\-\+\/\*]/g, '+')
+	string = string.replace(/[\/][\-\+\/\*]/g, '/')
+	string = string.replace(/[\*][\-\+\/\*]/g, '*')
 	var shouldICountItRightNow = string.slice(-1)=="=";
 	var arr = string.match(/([0-9]+[.][0-9]+|[0-9]+|[\-\+\/\*\.\(\)])/g);
 
